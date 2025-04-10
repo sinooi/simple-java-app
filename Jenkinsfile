@@ -9,6 +9,12 @@ pipeline {
 
   stages {
   
+    stage('Pre') {
+     steps {
+       echo 'test on webhook' 
+       }
+     }
+  
     stage('Build') {
       steps {
         sh 'mvn clean package'            
